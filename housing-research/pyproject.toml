@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "housing-ews"
+version = "0.1.0"
+description = "주택 수급 불균형 조기경보: 인허가-착공-준공 파이프라인 시차, GSADF 과열 검정, 정책 개입 임계값 산출"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+examples = ["matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
