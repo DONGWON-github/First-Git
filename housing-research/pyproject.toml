@@ -6,15 +6,23 @@ build-backend = "setuptools.build_meta"
 name = "housing-ews"
 version = "0.1.0"
 description = "주택 수급 불균형 조기경보: 인허가-착공-준공 파이프라인 시차, GSADF 과열 검정, 정책 개입 임계값 산출"
-requires-python = ">=3.10"
+# Python 3.14 권장(테스트 완료). 아래 하한은 cp314 휠이 제공되는 버전이며
+# 3.11~3.13에서도 동일하게 동작한다.
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
 dependencies = [
-    "numpy>=1.24",
-    "pandas>=2.0",
-    "scipy>=1.10",
+    "numpy>=2.3",
+    "pandas>=2.3",
+    "scipy>=1.16",
 ]
 
 [project.optional-dependencies]
-examples = ["matplotlib>=3.7"]
+examples = ["matplotlib>=3.10"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

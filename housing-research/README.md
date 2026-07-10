@@ -28,9 +28,14 @@ housing-research/
 
 ## 빠른 시작
 
+**Python 3.14 권장** (cp314 휠 기준 최신 과학 스택으로 검증: numpy≥2.3,
+pandas≥2.3, scipy≥1.16, matplotlib≥3.10. 3.11~3.13에서도 동작).
+
 ```bash
-pip install numpy pandas scipy statsmodels matplotlib
-python examples/run_demo.py
+python3.14 -m venv .venv && source .venv/bin/activate
+pip install numpy pandas scipy matplotlib
+python examples/run_demo.py     # 데모 (차트/보고서 → output/)
+python tests/test_housing_ews.py  # 스모크 테스트
 ```
 
 데모는 합성 데이터로 다음을 수행한다.
